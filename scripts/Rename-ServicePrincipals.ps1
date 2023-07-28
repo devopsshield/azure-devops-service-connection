@@ -241,10 +241,10 @@ function Update-Guid {
         [string] $filename
     )
 
-    ## GuidSwap.ps1
+    ## Update-Guid
     ##
-    ## Reads a file, finds any GUIDs in the file, and swaps them for a NewGUID
-    ##
+    ## Reads a file, finds any GUIDs in the file, and swaps them for a masked guid with 3-letter hint.
+    ## It also finds descriptors and masks them leaving a small hint.
 
     $folder = (Get-ChildItem $filename).Directory.FullName
     $baseFileName = (Get-ChildItem $filename).BaseName
@@ -283,7 +283,7 @@ function Update-Guid {
     $lastStart = 0
     $null = ([regex]::matches($text, $descriptorPattern) | ForEach-Object {
             $sbNew.Append($text.Substring($lastStart, $_.Index - $lastStart))
-            $maskedDescriptor = "aad.************************************************"
+            #$maskedDescriptor = "aad.************************************************"
             $maskedDescriptor = "aad.*********************************************" #leave hint
             $sbNew.Append($maskedDescriptor)
             $lastStart = $_.Index + $_.Length
