@@ -1,0 +1,48 @@
+{
+  "data": {
+    "subscriptionId": "c2d*****-****-****-****-************",
+    "subscriptionName": "c2d*****-****-****-****-************",
+    "creationMode": "Manual",
+    "environment": "AzureCloud",
+    "scopeLevel": "Subscription"
+  },
+  "id": "2a4*****-****-****-****-************",
+  "name": "wizzologypoc - Azure",
+  "type": "AzureRM",
+  "url": "https://management.azure.com/",
+  "createdBy": {
+    "displayName": "manu k",
+    "url": "https://spsprodcca1.vssps.visualstudio.com/Ab4b*****-****-****-****-************/_apis/Identities/56c*****-****-****-****-************",
+    "_links": {
+      "avatar": {
+        "href": "https://dev.azure.com/wizzologydevopsabcs/_apis/GraphProfile/MemberAvatars/aad.*********************************************mJi"
+      }
+    },
+    "id": "56c*****-****-****-****-************",
+    "uniqueName": "emmanuel@devopsabcs.com",
+    "imageUrl": "https://dev.azure.com/wizzologydevopsabcs/_apis/GraphProfile/MemberAvatars/aad.*********************************************mJi",
+    "descriptor": "aad.*********************************************mJi"
+  },
+  "description": "",
+  "authorization": {
+    "parameters": {
+      "tenantid": "a34*****-****-****-****-************",
+      "Role": "b24*****-****-****-****-************",
+      "serviceprincipalid": "bbb*****-****-****-****-************",
+      "authenticationType": "spnKey"
+    },
+    "scheme": "ServicePrincipal"
+  },
+  "isShared": false,
+  "isReady": true,
+  "owner": "Library",
+  "serviceEndpointProjectReferences": [
+    {
+      "projectReference": {
+        "id": "0fb*****-****-****-****-************",
+        "name": "wizzologypoc"
+      },
+      "name": "wizzologypoc - Azure"
+    }
+  ]
+}

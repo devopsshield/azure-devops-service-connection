@@ -1,0 +1,63 @@
+{
+  "data": {
+    "environment": "AzureCloud",
+    "scopeLevel": "Subscription",
+    "subscriptionId": "355*****-****-****-****-************",
+    "subscriptionName": "Dev",
+    "resourceGroupName": "",
+    "mlWorkspaceName": "",
+    "mlWorkspaceLocation": "",
+    "managementGroupId": "",
+    "managementGroupName": "",
+    "oboAuthorization": "",
+    "creationMode": "Automatic",
+    "azureSpnRoleAssignmentId": "23b*****-****-****-****-************",
+    "azureSpnPermissions": "[{\"roleAssignmentId\":\"23b*****-****-****-****-************\",\"resourceProvider\":\"Microsoft.RoleAssignment\",\"provisioned\":true}]",
+    "spnObjectId": "abd*****-****-****-****-************",
+    "appObjectId": "533*****-****-****-****-************",
+    "resourceId": ""
+  },
+  "id": "bb8*****-****-****-****-************",
+  "name": "MockVictoriaWebsite - Azure",
+  "type": "azurerm",
+  "url": "https://management.azure.com/",
+  "createdBy": {
+    "displayName": "manu k",
+    "url": "https://spsprodcca1.vssps.visualstudio.com/A9ba*****-****-****-****-************/_apis/Identities/56c*****-****-****-****-************",
+    "_links": {
+      "avatar": {
+        "href": "https://dev.azure.com/victoriadevopsabcs/_apis/GraphProfile/MemberAvatars/aad.*********************************************mJi"
+      }
+    },
+    "id": "56c*****-****-****-****-************",
+    "uniqueName": "emmanuel@devopsabcs.com",
+    "imageUrl": "https://dev.azure.com/victoriadevopsabcs/_apis/GraphProfile/MemberAvatars/aad.*********************************************mJi",
+    "descriptor": "aad.*********************************************mJi"
+  },
+  "description": "",
+  "authorization": {
+    "parameters": {
+      "tenantid": "a34*****-****-****-****-************",
+      "serviceprincipalid": "38c*****-****-****-****-************",
+      "authenticationType": "spnKey"
+    },
+    "scheme": "ServicePrincipal"
+  },
+  "isShared": false,
+  "isReady": true,
+  "operationStatus": {
+    "state": "Ready",
+    "statusMessage": ""
+  },
+  "owner": "Library",
+  "serviceEndpointProjectReferences": [
+    {
+      "projectReference": {
+        "id": "e0a*****-****-****-****-************",
+        "name": "OneVictoria"
+      },
+      "name": "MockVictoriaWebsite - Azure",
+      "description": ""
+    }
+  ]
+}

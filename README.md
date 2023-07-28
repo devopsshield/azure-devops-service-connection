@@ -32,7 +32,7 @@ Write-Host "There is a total of $($appRegistrations.Length) app registrations."
 Sample Output:
 ![get all app registrations](/media/get_all_app_registrations.png)
 
-The output `$appRegistrationsJson` is a JSON array of elements such as [sampleArmConnectionAppRegistrationData.json](https://github.com/devopsshield/ado-service-connection/blob/main/data/sampleArmConnectionAppRegistrationData.json)
+The output `$appRegistrationsJson` is a JSON array of elements such as [sampleArmConnectionAppRegistrationData_masked.json](/data/sampleArmConnectionAppRegistrationData_masked.json)
 
 Just as easily, we can obtain all service principals like so:
 ```
@@ -52,7 +52,7 @@ The output `$servicePrincipalsJson` is also a JSON array of elements.
 For ARM Service Connections created as in [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-using-automated-security), the corresponding App Registration will have its `homePageUrl` set to `https://VisualStudio/SPN` as can be seen here:
 ![sample arm service connection](/media/sample_arm_svc_conn.png)
 
-The corresponding JSON element [sampleArmConnectionAppRegistrationData.json](https://github.com/devopsshield/ado-service-connection/blob/main/data/sampleArmConnectionAppRegistrationData.json) reflects this fact:
+The corresponding JSON element [sampleArmConnectionAppRegistrationData_masked.json](/data/sampleArmConnectionAppRegistrationData_masked.json) reflects this fact:
 ![sample arm service connection JSON](/media/sample_arm_conn_json.png)
 
 #### Getting All ADO Service Connections (Do-It-Yourself)
@@ -77,7 +77,7 @@ Write-Host "Organization $organizationName has project $project with $($serviceE
 Sample Output:
 ![sample output using azure devops cli](/media/sample_output_azure_devops_cli.png)
 
-The output is a JSON array of elements that look like [sampleEndpointData.json](https://github.com/devopsshield/ado-service-connection/blob/main/data/sampleEndpointData.json).
+The output is a JSON array of elements that look like [sampleEndpointData_masked.json](/data/sampleEndpointData_masked.json).
 
 #### Getting All ADO Service Connections (With DevOps Shield)
 
@@ -86,11 +86,14 @@ DevOps Shield is an innovative cybersecurity platform for DevOps and available f
 Indeed, we can see all **127 service connections** for the project **OneProject** of the organization **devopsabcs** above in the Data Explorer:
 ![data explorer overview](/media/data_explorer_overview.png)
 
-We can also navigate to the same [sampleEndpointData.json](https://github.com/devopsshield/ado-service-connection/blob/main/data/sampleEndpointData.json):
+We can also navigate to the same [sampleEndpointData_masked.json](/data/sampleEndpointData_masked.json):
 ![data explorer details](/media/data_explorer_details.png)
 
 Finally, in a [single kusto query](https://github.com/devopsshield/ado-service-connection/blob/main/queries/service-connections.kql), we can obtain **all** service connections for **all** our projects in **all** our ADO organizations for **all** of our Microsoft Entra IDs (Azure ADs):
 ![kusto query](/media/kusto_query.png)
+
+Of particular interest are the ARM Service Connections:
+![arm service connection types](/media/workbook.png)
 
 #### Establishing order through naming conventions
 

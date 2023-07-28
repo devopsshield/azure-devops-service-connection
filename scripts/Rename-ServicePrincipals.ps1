@@ -235,6 +235,67 @@ function Get-ServiceConnections {
     return $exported
 }
 
+function Update-Guid {
+    param (
+        [Parameter(Mandatory)]
+        [string] $filename
+    )
+
+    ## GuidSwap.ps1
+    ##
+    ## Reads a file, finds any GUIDs in the file, and swaps them for a NewGUID
+    ##
+
+    $folder = (Get-ChildItem $filename).Directory.FullName
+    $baseFileName = (Get-ChildItem $filename).BaseName
+    $extension = (Get-ChildItem $filename).Extension
+    $outputFilename = "$folder\${baseFileName}_masked$extension"
+
+    $text = [string]::join([environment]::newline, (get-content -path $filename))
+
+    $sbNew = new-object system.text.stringBuilder
+
+    #$guidPattern = "[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}"
+    $guidPattern = "[a-fA-F0-9]{5}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}" #leave hint
+
+    $lastStart = 0
+    $null = ([regex]::matches($text, $guidPattern) | ForEach-Object {
+            $sbNew.Append($text.Substring($lastStart, $_.Index - $lastStart))
+            #$guid = [system.guid]::newguid()
+            #$maskedGuid = "********-****-****-****-************"
+            $maskedGuid = "*****-****-****-****-************" #leave hint
+            $sbNew.Append($maskedGuid)
+            $lastStart = $_.Index + $_.Length
+        })
+    $null = $sbNew.Append($text.Substring($lastStart))
+
+    # $sbNew.ToString() | out-file $outputFilename
+
+    Write-Host "Done masking guids"
+
+    $text = $sbNew.ToString()
+
+    $sbNew = new-object system.text.stringBuilder
+    
+    #$descriptorPattern = "aad.[a-zA-Z0-9]{48}"
+    $descriptorPattern = "aad.[a-zA-Z0-9]{45}" #leave hint
+
+    $lastStart = 0
+    $null = ([regex]::matches($text, $descriptorPattern) | ForEach-Object {
+            $sbNew.Append($text.Substring($lastStart, $_.Index - $lastStart))
+            $maskedDescriptor = "aad.************************************************"
+            $maskedDescriptor = "aad.*********************************************" #leave hint
+            $sbNew.Append($maskedDescriptor)
+            $lastStart = $_.Index + $_.Length
+        })
+    $null = $sbNew.Append($text.Substring($lastStart))
+
+    $sbNew.ToString() | out-file $outputFilename
+
+    Write-Host "Done masking descriptors"
+
+}
+
 try {
     # STEP 2
     Write-Host "Step 2: Get Service Connections from Log Analytics Workspace $WorkspaceName and export to CSV $serviceConnectionCsvPath ..."
@@ -599,11 +660,15 @@ if ($exported) {
 
         if ($lineContainsArmServiceConnection) {
             Set-Content -Value $prettyJson -Path $sampleDataJsonPath
+            Update-Guid -filename $sampleDataJsonPath
             Set-Content -Value $appRegistrationFoundByAppClientIdJson -Path $sampleArmConnectionJsonPath
+            Update-Guid -filename $sampleArmConnectionJsonPath
         }
         else {
             Set-Content -Value $prettyJson -Path $sampleDataCreatedManuallyJsonPath
+            Update-Guid -filename $sampleDataCreatedManuallyJsonPath
             Set-Content -Value $appRegistrationFoundByAppClientIdJson -Path $sampleArmConnectionCreatedManuallyJsonPath
+            Update-Guid -filename $sampleArmConnectionCreatedManuallyJsonPath
         }
 
         $subscriptionId = $($dataObj.data.subscriptionId)

@@ -1,0 +1,98 @@
+{
+  "addIns": [],
+  "api": {
+    "acceptMappedClaims": null,
+    "knownClientApplications": [],
+    "oauth2PermissionScopes": [
+      {
+        "adminConsentDescription": "Allow the application to access victoriadevopsabcs-OneVictoria-355*****-****-****-****-************ on behalf of the signed-in user.",
+        "adminConsentDisplayName": "Access victoriadevopsabcs-OneVictoria-355*****-****-****-****-************",
+        "id": "436*****-****-****-****-************",
+        "isEnabled": true,
+        "type": "User",
+        "userConsentDescription": "Allow the application to access victoriadevopsabcs-OneVictoria-355*****-****-****-****-************ on your behalf.",
+        "userConsentDisplayName": "Access victoriadevopsabcs-OneVictoria-355*****-****-****-****-************",
+        "value": "user_impersonation"
+      }
+    ],
+    "preAuthorizedApplications": [],
+    "requestedAccessTokenVersion": null
+  },
+  "appId": "38c*****-****-****-****-************",
+  "appRoles": [],
+  "applicationTemplateId": null,
+  "certification": null,
+  "createdDateTime": "2022-04-26T19:17:07Z",
+  "defaultRedirectUri": null,
+  "deletedDateTime": null,
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "ADO-victoriadevopsabcs-OneVictoria-bb8*****-****-****-****-************",
+  "groupMembershipClaims": null,
+  "id": "533*****-****-****-****-************",
+  "identifierUris": [],
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDeviceOnlyAuthSupported": null,
+  "isFallbackPublicClient": null,
+  "keyCredentials": [],
+  "notes": "No of Service Connections: 1\nhttps://dev.azure.com/victoriadevopsabcs/OneVictoria/_settings/adminservices?resourceId=bb8*****-****-****-****-************",
+  "optionalClaims": null,
+  "parentalControlSettings": {
+    "countriesBlockedForMinors": [],
+    "legalAgeGroupRule": "Allow"
+  },
+  "passwordCredentials": [
+    {
+      "customKeyIdentifier": null,
+      "displayName": null,
+      "endDateTime": "2024-04-26T19:17:07.6924222Z",
+      "hint": null,
+      "keyId": "5a8*****-****-****-****-************",
+      "secretText": null,
+      "startDateTime": "2022-04-26T19:17:07.6924222Z"
+    }
+  ],
+  "publicClient": {
+    "redirectUris": []
+  },
+  "publisherDomain": "devopsabcs.com",
+  "requestSignatureVerification": null,
+  "requiredResourceAccess": [],
+  "samlMetadataUrl": null,
+  "serviceManagementReference": null,
+  "servicePrincipalLockConfiguration": null,
+  "signInAudience": "AzureADMyOrg",
+  "spa": {
+    "redirectUris": []
+  },
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  },
+  "web": {
+    "homePageUrl": "https://VisualStudio/SPN",
+    "implicitGrantSettings": {
+      "enableAccessTokenIssuance": false,
+      "enableIdTokenIssuance": true
+    },
+    "logoutUrl": null,
+    "redirectUriSettings": [
+      {
+        "index": null,
+        "uri": "https://VisualStudio/SPN"
+      }
+    ],
+    "redirectUris": [
+      "https://VisualStudio/SPN"
+    ]
+  }
+}

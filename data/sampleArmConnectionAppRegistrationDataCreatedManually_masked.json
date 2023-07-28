@@ -1,0 +1,93 @@
+{
+  "addIns": [],
+  "api": {
+    "acceptMappedClaims": null,
+    "knownClientApplications": [],
+    "oauth2PermissionScopes": [
+      {
+        "adminConsentDescription": "Allow the application to access wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************ on behalf of the signed-in user.",
+        "adminConsentDisplayName": "Access wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************",
+        "id": "adb*****-****-****-****-************",
+        "isEnabled": true,
+        "type": "User",
+        "userConsentDescription": "Allow the application to access wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************ on your behalf.",
+        "userConsentDisplayName": "Access wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************",
+        "value": "user_impersonation"
+      }
+    ],
+    "preAuthorizedApplications": [],
+    "requestedAccessTokenVersion": null
+  },
+  "appId": "bbb*****-****-****-****-************",
+  "appRoles": [],
+  "applicationTemplateId": null,
+  "certification": null,
+  "createdDateTime": "2019-12-31T20:25:18Z",
+  "defaultRedirectUri": null,
+  "deletedDateTime": null,
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "ADO-wizzologydevopsabcs-wizzologypoc-2a4*****-****-****-****-************",
+  "groupMembershipClaims": null,
+  "id": "750*****-****-****-****-************",
+  "identifierUris": [
+    "https://wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************"
+  ],
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDeviceOnlyAuthSupported": null,
+  "isFallbackPublicClient": null,
+  "keyCredentials": [],
+  "notes": "No of Service Connections: 1\nhttps://dev.azure.com/wizzologydevopsabcs/wizzologypoc/_settings/adminservices?resourceId=2a4*****-****-****-****-************",
+  "optionalClaims": null,
+  "parentalControlSettings": {
+    "countriesBlockedForMinors": [],
+    "legalAgeGroupRule": "Allow"
+  },
+  "passwordCredentials": [
+    {
+      "customKeyIdentifier": null,
+      "displayName": null,
+      "endDateTime": "2020-12-01T05:00:00Z",
+      "hint": null,
+      "keyId": "51d*****-****-****-****-************",
+      "secretText": null,
+      "startDateTime": "2019-12-31T20:25:15.313Z"
+    }
+  ],
+  "publicClient": {
+    "redirectUris": []
+  },
+  "publisherDomain": "devopsabcs.com",
+  "requestSignatureVerification": null,
+  "requiredResourceAccess": [],
+  "samlMetadataUrl": null,
+  "serviceManagementReference": null,
+  "servicePrincipalLockConfiguration": null,
+  "signInAudience": "AzureADMyOrg",
+  "spa": {
+    "redirectUris": []
+  },
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  },
+  "web": {
+    "homePageUrl": "https://wizzologydevopsabcs-wizzologypoc-1a1*****-****-****-****-************",
+    "implicitGrantSettings": {
+      "enableAccessTokenIssuance": false,
+      "enableIdTokenIssuance": true
+    },
+    "logoutUrl": null,
+    "redirectUriSettings": [],
+    "redirectUris": []
+  }
+}
